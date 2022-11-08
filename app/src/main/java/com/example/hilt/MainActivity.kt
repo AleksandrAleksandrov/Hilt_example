@@ -17,10 +17,11 @@ import dagger.hilt.android.AndroidEntryPoint
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
 
-    private val viewModel: FirstViewModel by viewModels()
+    private val viewModel: ViewModelOne by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        viewModel.setValue()
         setContent {
             HiltExamplseTheme {
                 // A surface container using the 'background' color from the theme

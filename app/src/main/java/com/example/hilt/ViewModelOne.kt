@@ -5,7 +5,9 @@ import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 
 @HiltViewModel
-class FirstViewModel @Inject constructor() : ViewModel() {
+class ViewModelOne @Inject constructor(private val useCaseOne: UseCaseOne) : ViewModel() {
 
-
+    fun setValue() {
+        useCaseOne.performAction()
+    }
 }
